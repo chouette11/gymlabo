@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:background="#292a2f"
+    android:padding="20dp"
+    android:id="@+id/widget_container">
+
+    <LinearLayout
+        android:id="@+id/schedules"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/schedule1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/schedule2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/schedule3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/schedule4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/schedule5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/schedule6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/schedule_background"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:text="TextView"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>
