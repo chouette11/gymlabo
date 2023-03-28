@@ -25,10 +25,6 @@ class_text = """
 3. 頂点と軸の求め方
 抛物線の頂点は、2次関数の式において、x=-b/2aとして求めることができます。これは、抛物線が対称なためです。このxの値を、2次関数の式に代入することで、頂点のy座標を求めることができます。したがって、頂点の座標は、(-b/2a,a(-b/2a)^2+b(-b/2a)+c)となります。また、抛物線の軸は、頂点を通る直線です。この軸は、2次関数の式の中央に位置するため、x=-b/2aで求めることができます。軸は、y軸と垂直になります。頂点を求めることによって、抛物線の最小値または最大値を求めることができます。
 """
-# 目次を作成
-topics = pick_up_topics.pick_up_topics(class_text)
-for topic in topics:
-    class_text = topic + topics
 
 # # 音声をmake_audioに作成
 # make_audio.make_audio(class_text)
@@ -40,9 +36,6 @@ for topic in topics:
 #     make_image.make_image(image_word, index + 1)
 #     # make_image2.make_image(image_word, index + 1)
 
-
-# 目次の画像を作成
-make_topic.make_topic(class_text)
 
 # make_imageの画像を背景と結合
 combine_image.combine_img(class_text, SLIDE_NUM)
