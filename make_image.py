@@ -15,7 +15,7 @@ QUERY_URL = "https://api.openai.com/v1/images/generations"
 
 def make_image(prompt, index):
     translator = Translator(service_urls=['translate.google.com'])
-    text = translator.translate(prompt + "を説明する図", dest='en').text
+    text = translator.translate(prompt, dest='en').text
     headers = CaseInsensitiveDict()
     headers["Content-Type"] = "application/json"
     api_key = "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"

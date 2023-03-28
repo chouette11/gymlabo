@@ -3,7 +3,7 @@ from moviepy.editor import VideoFileClip, AudioFileClip
 def make_video():
     video_file = "./movie/movie.mp4"
     audio_file = "./make_audio/hello_world.mp3"
-    output_file = "./video/test_video.mp4"
+    output_file = "./video/video.mp4"
 
     # 動画ファイルを読み込む
     video_clip = VideoFileClip(video_file)

@@ -30,19 +30,17 @@ def combine_img(class_text, slide_num):
             # テロップ文章と時間の配列を作成
             time = spc * len(sentences[i])
             message.append([i, sum_time * fps, (sum_time + time) * fps, sentences[i]])
-            sum_time = sum_time + time + 0.4
+            sum_time = sum_time + time - 1
 
         return message
     
-    for i in range(0, (slide_num - 1) * 2 , 2):
+    for i in range(0, (slide_num - 1),):
         img1 = cv2.imread('./make_img/background.png')
         print(i)
         img2 = cv2.imread('./make_img/image' + str(i) +'.jpg')
-        img3 = cv2.imread('./make_img/image' + str(i+1) + '.jpg')
 
         large_img = img1
         small_img = img2
-        smail_img2 = img3
 
         x_offset1=320
         y_offset1=180
@@ -51,8 +49,6 @@ def combine_img(class_text, slide_num):
         y_offset2=180
 
         large_img[y_offset1:y_offset1+small_img.shape[0], x_offset1:x_offset1+small_img.shape[1]] = small_img
-
-        large_img[y_offset2:y_offset2+smail_img2.shape[0], x_offset2:x_offset2+smail_img2.shape[1]] = smail_img2
 
         # テロップの合成
 

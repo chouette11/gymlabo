@@ -1,3 +1,4 @@
+import re
 class_text = """
 1. 2次関数の定義とグラフの形状
 2次関数は、一般的にy=ax^2+bx+cの形で表されます。ここで、a、b、cは定数で、a≠0です。2次関数のグラフは、抛物線と呼ばれる曲線を描くもので、aの符号によって上に凸の抛物線か下に凸の抛物線かが決まります。xが増加すると、上に凸の抛物線になります。一方、xが減少すると、下に凸の抛物線になります。
@@ -11,4 +12,22 @@ class_text = """
 class_text = class_text.replace("。", "\n")
 l = class_text.split("\n")
 
-print(l)
+sentences = class_text.split("\n")  
+
+# 目次一覧
+topics = []
+for sentence in sentences:
+    print(sentence)
+
+    # 正規表現によるパターンマッチング
+    pattern = r'[\d]+\.'
+    pattern2 = r":[^:\n]*:|：[^:\n]*："
+    match1 = re.search(pattern, sentence)
+    match2 = re.search(pattern2, sentence)
+
+    # マッチング結果の取得
+    if match1 or match2:
+        topics.append(sentence)
+        print("Match found in text1:", match1.group())
+        
+print(topics)

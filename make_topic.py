@@ -43,14 +43,14 @@ def make_topic(class_text):
     smail_img2 = img3
     small_img3 = img4
 
-    x_offset1=0
-    y_offset1=0
+    x_offset1=300
+    y_offset1=200
 
-    x_offset2=0
-    y_offset2=50
+    x_offset2=300
+    y_offset2=400
 
-    x_offset3=0
-    y_offset3=100
+    x_offset3=300
+    y_offset3=600
 
     large_img[y_offset1:y_offset1+small_img.shape[0], x_offset1:x_offset1+small_img.shape[1]] = small_img
 
@@ -58,7 +58,7 @@ def make_topic(class_text):
 
     large_img[y_offset3:y_offset3+small_img3.shape[0], x_offset3:x_offset3+small_img3.shape[1]] = small_img3 
 
-    cv2.imwrite('make_img/image0.jpg', large_img)
+    cv2.imwrite('topic/image.jpg', large_img)
  
 
 

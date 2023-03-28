@@ -9,7 +9,7 @@ def make_text(prompt):
     model="gpt-3.5-turbo",
     messages=[
             {"role": "system", "content": "あなたは優秀な教師です。"},
-            {"role": "user", "content": "2次関数についての授業のカリキュラムを構成してください。"},
+            {"role": "user", "content": prompt + "についての授業のカリキュラムを構成してください。"},
         ]
     )
     cal = response["choices"][0]["message"]["content"]
@@ -17,7 +17,7 @@ def make_text(prompt):
     model="gpt-3.5-turbo",
     messages=[
             {"role": "system", "content": "あなたは優秀な教師です。"},
-            {"role": "user", "content": "2次関数についての授業のカリキュラムを構成してください。"},
+            {"role": "user", "content": prompt + "についての授業のカリキュラムを構成してください。"},
             {"role": "assistant", "content": cal},
             {"role": "user", "content": "上記のカリキュラムの1から3を順番に詳しく説明してください。"},
         ],
